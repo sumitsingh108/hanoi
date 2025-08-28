@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="hanoi.css">
+    <link rel="stylesheet" href="hanoi.js">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <h1>Tower of Hanoi</h1>
+            <div class="sub">Move the entire stack to another peg. 
+                Only one disk at a time,
+                and never place a bigger disk on a smaller one.
+            </div>
+        </div>
+        
+            <div class="controls">
+
+                <div class="row">
+
+                    <div class="field">
+                        <label for="n">Disks</label>
+                        <input id="n" type="number" min="3" max="10" value="4" />
+                    </div>
+
+                    <button class="btn" id="newGame">New Game</button>
+                    <button class="btn ghost" id="reset">Reset</button>
+                    <button class="btn primary" id="solve">Auto-solve</button>
+
+                    <div class="field">
+                        <label for="speed">Speed</label>
+                        <input id="speed" type="range" min="0" max="1000" value="300" />
+                    </div>
+                </div>
+
+                <div class="row stats">
+                    <div class="stat"><div class="label">Moves</div><div class="value" id="moves">0</div></div>
+                    <div class="stat"><div class="label">Minimum</div><div class="value" id="minMoves">0</div></div>
+                    <div class="stat"><div class="label">Status</div><div class="value" id="status">Ready</div></div>
+                </div>
+            </div>
+
+            <div class="board">
+                <div class="pegs" id="pegs">
+                    <div class="peg" data-peg="0"><div class="slot" id="peg0"></div></div>
+                    <div class="peg" data-peg="1"><div class="slot" id="peg1"></div></div>
+                    <div class="peg" data-peg="2"><div class="slot" id="peg2"></div></div>
+                </div>
+                <div class="hint">Click a source peg, then a destination peg -Tip: use <strong> Auto-Solve</strong> to watch the optimal solution.</div>
+            </div>
+
+            <div class="footer">
+                Built with in plain HTML/CSS/JS. Fully client-side.
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
